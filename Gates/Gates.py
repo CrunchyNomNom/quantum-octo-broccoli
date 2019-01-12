@@ -57,6 +57,3 @@ class CNOT(C):
 
     def __repr__(self):
         return "CNOT." + super(CNOT, self).__repr__()
-
-g = CNOT(1,2)
-print(g)

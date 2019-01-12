@@ -1,4 +1,5 @@
 from Qubit import Qubit
+import numpy as np
 
 class Register:
     def __init__(self, n):
@@ -10,10 +11,10 @@ class Register:
     def kroneckerize(self):
         last = self.qubits[0].state
         
-        if self.size() == 1:
+        if self.size == 1:
             return last
         
-        for i in range(1,self.size()):
+        for i in range(1,self.size):
             last = np.kron(last, self.qubits[i].state)
             
         return last
