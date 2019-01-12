@@ -4,7 +4,7 @@ class Pipeline:
         self.steps = []
     
     def addStep(self, step):
-        rs = self.register.size()
+        rs = self.register.size
         ss = step.size()
         if not rs == ss:
             raise ValueError("The size of added step ({}) is not equal to the size of the register ({})".format(rs, ss))
@@ -29,3 +29,4 @@ class Pipeline:
             result += "\nStep {}:".format(i)
             result += "\n" + str(self.steps[i])
         return result
+        

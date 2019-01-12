@@ -11,4 +11,4 @@ class Qubit:
         return (self.state[1][0])
     
     def __repr__(self):
-        return str(self.state)
+        return str(self.state[0]) + " " + str(self.state[1])

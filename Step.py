@@ -15,7 +15,7 @@ class Step:
             self.gates[cq] = gate
             self.gates[tq] = gate
         else:
-            self.gates[gate.qubit_index] = gate
+            self.gates[gate.qubit_id] = gate
         
     def kroneckerize(self):
         return kronekerize(0, 1)
@@ -45,3 +45,4 @@ class Step:
     
     def __repr__(self):
         return str(s.gates)
+
